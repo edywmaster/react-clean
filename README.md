@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Clean 2022
 
-## Getting Started
+Este é um modelo de projeto limpo, para iniciar novos projetos React utilizando Next e Typescript em 2022.
 
-First, run the development server:
+## Como esse projeto foi criado
+
+Primeiro passo, iniciando um novo projeto com npm:
+
+```bash
+npx create-next-app react-clean --use-npm
+```
+Excluir arquivos e pastas:
+
+- Excluir todos os arquivos da pasta `public`;
+- Excluir pasta API dentro da pasta pages. Ex.: `pages/API`;
+
+Adicionar Typescript:
+
+```bash
+npm install --save @types/react @types/node
+```
+Renomear arquivos para .tsx:
+
+- _app.js para _app.tsx;
+- index.js para index.tsx;
+
+Limpar todos os conteudos e remover importações desnecessarias em _app.tsx e index.tsx
+
+Rodar projeto para reconhecer typescript e criar arquivos nescessarios:
 
 ```bash
 npm run dev
-# or
-yarn dev
+```
+Arquivos criados após comando:
+
+- next-env.d.ts
+- tsconfig.json
+
+Instalar eslint como dependencia de desenvolvimento:
+
+```bash
+npm install eslint --save-dev
+```
+Configurar eslint:
+
+```bash
+npx eslint --init
+```
+Selecionar as seguintes opções de configuração:
+
+- To check syntax, find problems, and enforce code style
+- JavaScript modules (import/export)
+- React
+- Does your project use TypeScript? » Yes
+- Where does your code run » Browser e Node
+- Use a popular style guide » Standard
+- What format do you want your config file to be in? » JSON
+- Do you want to downgrade? » Yes
+-  Would you like to install them now with npm? » Yes
+
+Configurar vscode para corrigir o código em autosave usando eslint:
+
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+},
+
+Adicionar a extenção editconfig:
+
+- Instalar extenção editconfig;
+- Criar arquivo de configuração;
+
+Instalar o Prettier e plugns para eslint:
+
+```bash
+npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Configurar o eslint no arquivo `.eslintrc.json`
+Criar arquivo ignore do eslint `.eslintignore`
+Criar de configuração do prettier `prettier.config.js`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
