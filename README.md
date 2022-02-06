@@ -11,8 +11,9 @@ npx create-next-app react-clean --use-npm
 ```
 Excluir arquivos e pastas:
 
-- Excluir todos os arquivos da pasta `public`;
+- Excluir todos os arquivos dentro da pasta `public`;
 - Excluir pasta API dentro da pasta pages. Ex.: `pages/API`;
+- Excluir pasta `styles` e todo seu conteudo;
 
 Adicionar Typescript:
 
@@ -75,7 +76,9 @@ Instalar o Prettier e plugns para eslint:
 npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
-Configurar o eslint no arquivo `.eslintrc.json`
-Criar arquivo ignore do eslint `.eslintignore`
-Criar de configuração do prettier `prettier.config.js`
+Configurar o eslint:
+
+- Arquivo de configuração `.eslintrc.json`
+- Criar arquivo ignore do eslint `.eslintignore`
+- Criar de configuração do prettier `prettier.config.js`
 
